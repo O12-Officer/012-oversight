@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oversight Node Access</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #c0c0c0;
+      font-family: monospace;
+      padding: 40px;
+    }
+    input {
+      background-color: #111;
+      color: #c0c0c0;
+      border: 1px solid #444;
+      padding: 5px;
+      margin: 5px 0;
+    }
+    button {
+      background-color: #222;
+      color: #c0c0c0;
+      border: 1px solid #444;
+      padding: 5px 10px;
+    }
+    .system {
+      margin-top: 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<h2>OVERSIGHT NODE — RESTRICTED</h2>
+
+<label>Username:</label><br>
+<input id="user"><br>
+
+<label>Password:</label><br>
+<input id="pass" type="password"><br>
+
+<button onclick="login()">Submit</button>
+
+<div class="system" id="msg"></div>
+
+<script>
+function login() {
+  const u = document.getElementById("user").value;
+  const p = document.getElementById("pass").value;
+
+  if (u === "BCKDR" && p === "ANTIPODE12") {
+    window.location.href = "legacy.html";
+  } else {
+    document.getElementById("msg").innerText =
+      "ACCESS DENIED. ACTIVITY LOGGED.";
+  }
+}
+</script>
+
+</body>
+</html>
