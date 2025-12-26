@@ -2,11 +2,23 @@
 <html>
 <head>
   <script>
+  // Gate: block direct URL access unless login flag exists
   if (localStorage.getItem("o12_backdoor_ok") !== "1") {
+    window.location.href = "backdoor.html";
+  }
+
+  // Logout helper
+  function clearAccess() {
+    localStorage.removeItem("o12_backdoor_ok");
     window.location.href = "backdoor.html";
   }
 </script>
 
+<p style="margin-top:10px;">
+  <a href="#" onclick="clearAccess(); return false;" style="color:#888; text-decoration:none;">
+    [Clear access / Log out]
+  </a>
+</p>
   <title>Legacy Access</title>
   <style>
     body {
