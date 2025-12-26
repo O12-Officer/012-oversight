@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+  if (localStorage.getItem("o12_backdoor_ok") !== "1") {
+    window.location.href = "backdoor.html";
+  }
+</script>
+
   <title>Legacy Access</title>
   <style>
     body {
