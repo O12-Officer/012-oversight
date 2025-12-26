@@ -48,7 +48,8 @@ function login() {
   const p = document.getElementById("pass").value;
 
   if (u === "BCKDR" && p === "ANTIPODE12") {
-    window.location.href = "legacy.html";
+  localStorage.setItem("o12_backdoor_ok", "1");
+  window.location.href = "legacy.html";
   } else {
     document.getElementById("msg").innerText =
       "ACCESS DENIED. ACTIVITY LOGGED.";
